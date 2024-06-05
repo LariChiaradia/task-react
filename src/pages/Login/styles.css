@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
-    color: #fff;
+    color: #000;
   }
   
   header {
@@ -87,11 +87,21 @@
     color: #777;
     cursor: pointer;
   }
-  
-  main form .password-container #eye {
-    display: none;
-  }
-  
+
+  main form .password-container #faEye{
+    position: absolute;
+    top: 63%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+main form .password-container #faEyeSlash{
+    position: absolute;
+    top: 63%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
   main form .password-infos {
     width: 90%;
     margin-top: 3%;
@@ -101,6 +111,7 @@
   }
   
   main form .password-infos a {
+    color: #fff;
     transition: 0.2s ease-in-out;
   }
   
@@ -109,6 +120,7 @@
   }
   
   main form button {
+    color: #fff;
     background-color: #7931ff;
     width: 90%;
     height: 50px;
@@ -142,6 +154,7 @@
   }
   
   main form footer span {
+    color: #fff;
     font-weight: 400;
     font-size: 0.9em;
     margin-top: 10%;
@@ -149,6 +162,7 @@
   }
   
   main form footer a {
+    color: #fff;
     font-weight: 600;
     transition: 0.2s ease-in-out;
   }

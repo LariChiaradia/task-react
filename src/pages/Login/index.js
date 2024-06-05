@@ -1,5 +1,6 @@
 import {React, useState} from "react";
 import { useNavigate } from 'react-router-dom';
+import { FaEye,FaEyeSlash  } from "react-icons/fa";
 import "./styles.css";
 import api from '../../services/api';
 
@@ -30,20 +31,10 @@ export default function Login(){
       }
     }
   
-    const showPassword = () => {
-      const passwordInput = document.getElementById("field-password");
-      const eye = document.getElementById("eye");
-      const eyeSlash = document.getElementById("eye-slash");
+    const [passwordVisible, setPasswordVisible] = useState(false);
   
-      if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        eye.style.display = "none";
-        eyeSlash.style.display = "block";
-      } else {
-        passwordInput.type = "password";
-        eye.style.display = "block";
-        eyeSlash.style.display = "none";
-      }
+    const showPassword = () => {
+      setPasswordVisible(!passwordVisible);
     };
 
     return(
@@ -63,7 +54,7 @@ export default function Login(){
             />
             <div className="password-container">
               <input
-                type="password"
+                type={passwordVisible ? "text" : "password"}
                 id="field-password"
                 className="field-password"
                 placeholder="***********"
@@ -71,16 +62,11 @@ export default function Login(){
                 onChange={e=>setPassword(e.target.value)}
                 required
               />
-              <i
-                className="fa-solid fa-eye"
-                id="eye"
-                onClick={showPassword}
-              ></i>
-              <i
-                className="fa-solid fa-eye-slash"
-                id="eye-slash"
-                onClick={showPassword}
-              ></i>
+            {passwordVisible ? (
+                <FaEye id="faEye" size={20} onClick={showPassword} />
+            ) : (
+                <FaEyeSlash id="faEyeSlash" size={20} onClick={showPassword} />
+            )}
             </div>
           </section>
           <section className="password-infos">
