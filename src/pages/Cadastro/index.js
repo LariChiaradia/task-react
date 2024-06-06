@@ -1,7 +1,7 @@
 import React,{useState}from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEye,FaEyeSlash  } from "react-icons/fa";
-import './styles.css';
+import "./styles.css";
 import api from '../../services/api';
 
 export default function Cadastro(){

@@ -21,10 +21,10 @@ export default function Login(){
       try {
         const response = await api.post('/api/Auth/Login', data);
         localStorage.setItem('email', email);
-        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('accessToken', response.data.accessToken);
         localStorage.setItem('expiration', response.data.expiration);
   
-        navigate ("/HomePage");
+        navigate ("/tarefas");
   
       } catch (error) {
         alert('O login falhou' + error)

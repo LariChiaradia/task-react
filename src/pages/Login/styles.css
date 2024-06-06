@@ -23,7 +23,6 @@
   main {
     width: 100%;
     min-height: 100vh;
-    /* background: linear-gradient(#7931ff, #4c00ff5b); */
     background: #F0F0F5;
     display: flex;
     justify-content: center;
@@ -90,14 +89,14 @@
 
   main form .password-container #faEye{
     position: absolute;
-    top: 63%;
+    top: 50%;
     right: 10px;
     transform: translateY(-50%);
 }
 
 main form .password-container #faEyeSlash{
     position: absolute;
-    top: 63%;
+    top: 50%;
     right: 10px;
     transform: translateY(-50%);
 }

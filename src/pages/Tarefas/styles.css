@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: #000000;
+}
+
+.tarefas-container .header-tarefas {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Dividindo em duas colunas, uma flexível e outra automática */
+    align-items: center;
+}
+
+.tarefas-container .header-tarefas .bemVindo {
+    margin-left: 1rem;
+    color: #ffffff;
+}
+
+.tarefas-container .header-tarefas .bemVindo strong {
+    color: #ffffff;
+}
+
+.tarefas-container .header-tarefas .title {
+    justify-self: end; /* Alinha o título à direita */
+    margin-right: 18rem;
+}
+
+.tarefas-container .header-tarefas .btn-logout {
+    justify-self: end; /* Alinha o botão de logout à direita */
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #DCDCE6;
+    background: transparent;
+    margin-bottom: 10px;
+    margin-right: 1rem;
+    transition: border-color 0.5s;
+}
+
+.tarefas-container .header-tarefas .btn-logout:hover {
+    border-color: #201465;
+}
+
+.tarefas-container .header-tarefas button .icon-logout {
+    position: absolute;
+    top: 12px;
+    left: 115.5rem;
+    margin: 10px;
+}
+
+.main-tarefas {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma única coluna */
+    align-items: center;
+}
+
+.main-tarefas .btn-nova-tarefa {
+    width: 50rem;
+    height: 60px;
+    background: #7931ff;
+    border: 0;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-left: 550px;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.3s;
+}
+
+.main-tarefas .btn-nova-tarefa:hover {
+    filter: brightness(80%);
+}
+
+.main-tarefas .form-tarefas {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: transparent;
+}
+
+.main-tarefas .form-tarefas input {
+    width: 50rem;
+    height: 60px;
+    color: #333333;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 0 24px;
+    margin-top: 16px;
+}
+
+.tarefas-container ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Uma grade flexível de colunas */
+    grid-gap: 25px; /* Espaçamento entre os itens */
+    padding: 0 25px;
+    margin-bottom: 15rem;
+}
+
+.tarefas-container ul li {
+    background: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.tarefas-container ul li button {
+    border: 0;
+    background: transparent;
+    margin-top: auto;
+}
+
+.tarefas-container ul li button:hover {
+    opacity: 0.8;
+}
+
+.tarefas-container ul li strong {
+    display: block;
+    margin-bottom: 16px;
+    color: #41414D;
+}
+
+.tarefas-container ul li p + strong {
+    margin-top: 32px;
+}
+
+.tarefas-container ul li p {
+    color: #737380;
+    line-height: 21px;
+    font-size: 16px;
+}
