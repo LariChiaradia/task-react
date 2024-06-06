@@ -90,14 +90,14 @@
 
   main form .password-container #faEye{
     position: absolute;
-    top: 63%;
+    top: 50%;
     right: 10px;
     transform: translateY(-50%);
 }
 
 main form .password-container #faEyeSlash{
     position: absolute;
-    top: 63%;
+    top: 50%;
     right: 10px;
     transform: translateY(-50%);
 }
